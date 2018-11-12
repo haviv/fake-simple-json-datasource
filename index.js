@@ -231,7 +231,7 @@ app.all('/query', function(req, res){
 
             _ci_type = target.ci_type;;
          metric2ci_cache[_target] = data;
-	 var _path = '/api/now/v1/clotho/transform/'+_ci_type+"/"+_target+"?sysparm_query="+_query+"&sysparm_transforms="+_transform+"&sysparm_start="+_start+"&sysparm_end="+_end+"&sysparm_display_value=true";
+	 var _path = '/api/now/v1/clotho/transform/'+_ci_type+"/"+_target+"?sysparm_query="+_query+"&sysparm_transforms="+_transform+"&sysparm_start="+_start+"&sysparm_end="+_end+"&sysparm_display_value=true&sysparm_subject_limit=30";
 
             console.log("query is:"+_path);
             call_clotho (_path, function (result){
